@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #455ad3, #2c44cf, #122ab1, #5d35ca);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: antiquewhite;
+}
+
+h2 {
+  margin: 3rem;
+  font-size: 2rem;
+}
+
+#multiplication-form {
+  color: black;
+  background-color: white;
+  width: 300px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  flex-wrap: wrap;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control label {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.form-control input {
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid rgb(99, 95, 95);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+#multiplication-form input[type="submit"] {
+  width: 230px;
+  padding: 10px;
+  background-color: rgb(36, 35, 35);
+  color: antiquewhite;
+  border: 1px solid black;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+#multiplication-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#multiplication-operations {
+  background-color: white;
+  width: 300px;
+  padding: 50px;
+  color: black;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#multiplication-operations p {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  margin-bottom: 2px;
+  padding: 10px;
+  border: 1px solid rgb(99, 95, 95);
+  border-radius: 8px;
+  letter-spacing: 2px;
+}
+
+#multiplication-operations .result {
+  margin-left: 0.4rem;
+}

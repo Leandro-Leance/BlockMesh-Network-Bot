@@ -1,0 +1,32 @@
+body {
+  background-color: #e4d6d6;
+  margin-bottom: 1000px;
+}
+
+.btn-container {
+  padding: 25px;
+  background-color: rgb(0, 102, 255);
+  margin: 20px auto;
+  text-align: center;
+}
+
+.botao {
+  border-style: none;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: rgb(252, 21, 98);
+  color: #e4d6d6;
+  font-size: 1rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.a {
+  text-decoration: none;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: rgb(214, 71, 15);
+  color: #e4d6d6;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
