@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de QRCode</title>
+    <!-- Fonte Ubunto Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <!--Estilos-->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header id="qr-header">
+        <h1>Gerador de QR Code</h1>
+        <p>Insira uma Url ou texto, para criar um QR Code</p>
+      </header>
+      <div id="qr-form">
+        <input type="text" placeholder="Digite a URL ou texto" />
+        <button>Gerar QR Code</button>
+      </div>
+      <div id="qr-code">
+        <img src="img/qrcode.png" alt="QR Code" />
+      </div>
+    </div>
+  </body>
+</html>

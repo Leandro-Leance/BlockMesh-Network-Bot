@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu Sans";
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #09376b;
+}
+
+.container {
+  background-color: #fff;
+  height: 260px;
+  width: 400px;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.2s;
+}
+
+.active {
+  height: 500px;
+}
+
+/* todo Header */
+#qr-header {
+  text-align: center;
+}
+
+#qr-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+#qr-header p {
+  color: #444;
+  font-size: 0.9rem;
+}
+
+/* todo Form*/
+#qr-form {
+  margin: 20px 15px;
+}
+
+#qr-form input,
+#qr-form button {
+  width: 100%;
+  height: 55px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+#qr-form input {
+  padding: 10px 15px;
+  border: 1px solid #777;
+}
+
+#qr-form button {
+  background-color: #0b8d3f;
+  color: #fff;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.5s;
+}
+
+#qr-form button:hover {
+  opacity: 1;
+  background-color: #144e2c;
+}
+
+/* todo QR CODE*/
+#qr-code {
+  display: flex;
+  opacity: 0;
+  border: 1px solid #ccc;
+  padding: 30px 0;
+  margin: 20px 15px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.container.active #qr-code {
+  opacity: 1;
+}
