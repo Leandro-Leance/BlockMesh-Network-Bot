@@ -190,7 +190,7 @@ header nav {
 
 /*todo Media Query*/
 
-@media (min-width: 700px) {
+@media (max-width: 700px) {
   #navbar li {
     display: none;
   }
@@ -221,5 +221,20 @@ header nav {
 
   #main-content #title {
     font-size: 3rem;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 850px) {
+  #main-content {
+    max-width: 100% !important;
+    padding: 2rem;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 851px) {
+  #main-content #product-image {
+    max-width: 100%;
+    margin: 2rem;
   }
 }
