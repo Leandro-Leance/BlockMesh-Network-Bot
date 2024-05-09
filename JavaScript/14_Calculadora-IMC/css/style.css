@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background-color: #090e22;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.hide {
+  display: none !important;
+}
+
+.container {
+  min-width: 400px;
+  min-height: 400px;
+  background-color: #1d1e33;
+  padding: 2rem;
+}
+
+/*todo: IMC Form*/
+#calc-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  flex: 1; /*! completa toda a área disponível*/
+}
+
+.form-control label {
+  font-weight: bold;
+  margin-bottom: 0.6rem;
+  color: #ccc;
+}
+
+.form-control input {
+  padding: 1rem 0.5rem;
+}
+
+.action-control {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1rem; /*! Margin entre elementos. Regra para display*/
+}
+
+button {
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  background-color: #e42a1c;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.8;
+  flex: 1;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+#clear-btn {
+  background-color: #444;
+}
+
+/*todo: Table*/
+#result-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#imc-number {
+  font-size: 2.4rem;
+  margin-bottom: 0.6rem;
+}
+
+#imc-info {
+  font-size: 1.4rem;
+  color: #ccc;
+}
+
+#result-container h3 {
+  margin-top: 1rem;
+  color: #dfdfdf;
+}
+
+#imc-table {
+  margin: 1.5rem 0;
+  font-size: 0.8rem;
+}
+
+.table-header {
+  font-weight: bold;
+  color: #ccc;
+}
+
+.table-header,
+.table-data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #444;
+}
+
+.table-header h4,
+.table-data p {
+  flex: 1;
+}
+
+.table-header h4:nth-child(3), /*! selecionando elemento especifico*/
+.table-data p:nth-child(3) {
+  max-width: 80px;
+}
+
+#back-btn {
+  align-self: center; /*! pega o tamanho total do elemnto definido pelo padding e o conteúdo e centraliza no flex da áera*/
+}
+
+.good {
+  color: #12db34;
+}
+
+.low {
+  color: #dbce12;
+}
+
+.medium {
+  color: #db6212;
+}
+
+.high {
+  color: #db1912;
+}
