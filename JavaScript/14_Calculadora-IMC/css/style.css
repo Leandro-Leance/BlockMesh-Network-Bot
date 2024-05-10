@@ -135,12 +135,12 @@ button:hover {
   align-self: center; /*! pega o tamanho total do elemnto definido pelo padding e o conteúdo e centraliza no flex da áera*/
 }
 
-.good {
-  color: #12db34;
-}
-
 .low {
   color: #dbce12;
+}
+
+.good {
+  color: #12db34;
 }
 
 .medium {
@@ -149,4 +149,9 @@ button:hover {
 
 .high {
   color: #db1912;
+}
+
+.very-high {
+  background-color: #000002;
+  color: #960606;
 }
