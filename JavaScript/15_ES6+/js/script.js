@@ -1,199 +1,116 @@
-// 1 var, let e const
-var x = 10;
-var y = 15;
+// * FILTER
+//* com o filter eu posso filtrar as informações de um array [array]
+const arr = [1, 2, 3, 4, 5, 6];
 
-if (y > 10) {
-  var x = 5;
-  console.log(x);
-}
-
-console.log(x);
-
-let a = 10;
-let b = 15;
-
-if (b > 10) {
-  let a = 5;
-  console.log(a);
-}
-
-console.log(a);
-
-function logName() {
-  const name = "Pedro";
-  console.log(name);
-}
-
-const name = "Matheus";
-
-logName();
-
-// 2 arrow function
-const sum = function (a, b) {
-  return a + b;
-};
-
-const arrowSum = (a, b) => a + b;
-
-console.log(sum(5, 5));
-console.log(arrowSum(5, 5));
-
-const greeting = (name) => {
-  if (name) {
-    return "Hello " + name + "!";
-  } else {
-    return "Hello!";
-  }
-};
-
-console.log(greeting());
-console.log(greeting("Matheus"));
-
-const user = {
-  name: "Theo",
-  sayUserName() {
-    setTimeout(function () {
-      console.log(this);
-      console.log("Username: " + this.name);
-    }, 1000);
-  },
-  sayUserNameArrow() {
-    setTimeout(() => {
-      console.log(this);
-      console.log("Username: " + this.name);
-    }, 1200);
-  },
-};
-
-// user.sayUserName()
-// user.sayUserNameArrow()
-
-// 3 filter
-const arr = [1, 2, 3, 4, 5];
-
-const highNumbers = arr.filter((n) => {
+const numerosMaiores = arr.filter((n) => {
   if (n >= 3) {
     return n;
   }
 });
 
-console.log(highNumbers);
+console.log(numerosMaiores);
 
-const users = [
+const user = [
   { name: "Matheus", available: true },
   { name: "Pedro", available: false },
   { name: "Marcos", available: true },
-  { name: "Josias", available: false },
+  { name: "Carlos", available: false },
+  { name: "Camargo", available: true },
 ];
 
-const availableUsers = users.filter((user) => user.available);
+//! capturando apenas os disponiveis, no caso true
+const usuariosDisponiveis = user.filter((user) => user.available);
+console.log(usuariosDisponiveis);
 
-console.log(availableUsers);
+console.log("");
+console.log("==============================================================");
+console.log("");
 
-// 4 map
+//* MAP
+//* O map percorre todo o array, podendo alterar o que precisamos, enquanto o filter pega o q precisamos de um array
+
 const products = [
-  { name: "Camisa", price: 10.99, category: "Roupa" },
-  { name: "Chaleira elétrica", price: 150, category: "Eletro" },
-  { name: "Fogão", price: 499, category: "Eletro" },
-  { name: "Calça jeans", price: 49.99, category: "Roupa" },
+  { name: "Caneta", price: 7.99, category: "oferta" },
+  { name: "Caderno", price: 9.99, category: "abusivo" },
+  { name: "Lapis", price: 5.99, category: "oferta" },
+  { name: "Borracha", price: 2.99, category: "oferta" },
+  { name: "Apontador", price: 9.99, category: "abusivo" },
 ];
 
 products.map((product) => {
-  if (product.category === "Roupa") {
-    product.onSale = true;
+  if (product.category === "oferta") {
+    product.desatualizado = true;
+  }
+
+  if (product.category === "abusivo") {
+    product.desatualizado = false;
   }
 });
 
 console.log(products);
 
-// 5 template literals
-const userName = "Matheus";
-const age = 30;
+const mudar = products.filter((atualizar) => atualizar.desatualizado);
+console.log(mudar);
 
-console.log(`O nome do usuário é ${userName} e ele tem ${age} anos!`);
+const alterando = mudar.forEach((mudando) => {
+  if (mudando.desatualizado === true) {
+    mudando.desatualizado = false;
+  }
+});
 
-// 6 destructuring
-const fruits = ["Maçã", "Mamão", "Laranja"];
+console.log(alterando);
 
+console.log("");
+console.log("==============================================================");
+console.log("");
+
+//* DESTRUCTURING
+
+const fruits = ["maçã", "mamão", "laranja"];
+
+//todo para usar esta ação, precisamos criar um array com os nomes como abaixo, e usar o método de atribuição e o nome da array que desejamos os dados
 const [f1, f2, f3] = fruits;
 
-console.log(f1);
+console.log(f1, f3);
 
 const productDetails = {
-  name: "Mouse",
+  type: "Mouse",
   price: 39.99,
   category: "Periféricos",
-  color: "Cinza",
+  color: "Preto",
 };
 
-const {
-  name: productName,
-  price: productPrice,
-  category: productCategory,
-  color,
-} = productDetails;
+//todo: aqui consigo pegar cada chave do objeto e seus valores, é so utilizar o mesmo processo, começo passando o nome das chaves para acessar seus valores e depois uso método de atribuição e o nome do objeto
+
+//! Aqui a chave type teve seu nome alterado para nomeDoProduto
+const { type: nomeDoProduto, price, category, color } = productDetails;
+
+console.log(nomeDoProduto, price);
 
 console.log(
-  `O nome do produto é ${productName}, custa R$${productPrice} e é da cor ${color}.`
+  `O nome do produto é ${nomeDoProduto}, e ele custa ${price}, e é da cor ${color}`
 );
 
-// 7 spread operator
+console.log("");
+console.log("==============================================================");
+console.log("");
+
+//* SPREAD OPERATOR ...
+// todo: utilizado em array e objetos, podemos unir dois arrays ou dois objetos para formar apenas um
+
 const a1 = [1, 2, 3];
 const a2 = [4, 5, 6];
 
+//! Unindo com o spread operator ...
 const a3 = [...a1, ...a2];
 
 console.log(a3);
 
-const a4 = [0, ...a1, 4];
-
-console.log(a4);
-
 const carName = { name: "Gol" };
 const carBrand = { brand: "VW" };
-const otherInfos = { km: 100000, price: 49000 };
+const otherInfos = { km: "10000", price: "50.0000" };
 
+//! Unindo com o spread operator ...
 const car = { ...carName, ...carBrand, ...otherInfos };
 
 console.log(car);
-
-// 8 classes
-class Product {
-  constructor(name, price) {
-    this.name = name;
-    this.price = price;
-  }
-
-  productWithDiscount(discount) {
-    return this.price * ((100 - discount) / 100);
-  }
-}
-
-const shirt = new Product("Camisa gola V", 20);
-
-console.log(shirt.productWithDiscount(10));
-
-// 9 heranca
-class ProductWithAttributes extends Product {
-  constructor(name, price, colors) {
-    super(name, price);
-    this.colors = colors;
-  }
-
-  showColors() {
-    console.log("As cores são: ");
-    this.colors.forEach((color) => {
-      console.log(color);
-    });
-  }
-}
-
-const hat = new ProductWithAttributes("Chapéu", 29.99, [
-  "Preto",
-  "Amarelo",
-  "Verde",
-]);
-
-console.log(hat.name);
-
-hat.showColors();
