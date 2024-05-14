@@ -1,0 +1,42 @@
+* {
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #36343a;
+}
+
+.title {
+  text-align: center;
+  font-family: 2rem;
+  padding: 2rem;
+  color: antiquewhite;
+  background-color: #2a292c;
+}
+
+.container {
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.image-container {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #2a292c;
+}
+
+.image-container img {
+  display: block;
+  width: 1000px;
+  height: 600px;
+  margin: 2rem auto 1rem; /*! 2rem em cima, auto nas laterais deixando no centro e 1rem embaixo */
+}
+
+.image-container p {
+  text-align: center;
+  font-weight: bold;
+  color: antiquewhite;
+}
