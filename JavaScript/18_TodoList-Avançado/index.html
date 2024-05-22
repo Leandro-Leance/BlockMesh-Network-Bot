@@ -32,7 +32,7 @@
           </button>
         </div>
       </form>
-      <form id="edit-form">
+      <form id="edit-form" class="hide">
         <p>Edite sua tarefa:</p>
         <div class="form-control">
           <input type="text" id="edit-input" />
@@ -52,7 +52,7 @@
             </button>
           </form>
         </div>
-        <div id="filters">
+        <div id="filter">
           <h4>Filtrar:</h4>
           <select id="filter-select">
             <option value="all">Todos</option>
@@ -62,7 +62,7 @@
         </div>
       </div>
       <div id="todo-list">
-        <div class="todo">
+        <div class="todo done">
           <h3>Estou fazendo alguma coisa...</h3>
           <button class="finish-todo">
             <i class="fa-solid fa-check"></i>
@@ -73,6 +73,9 @@
           <button class="remove-todo">
             <i class="fa-solid fa-xmark"></i>
           </button>
+        </div>
+
+        <div class="todo done">
           <h3>Estudar JavaScript</h3>
           <button class="finish-todo">
             <i class="fa-solid fa-check"></i>
